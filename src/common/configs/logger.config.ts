@@ -7,7 +7,7 @@ import { Defaults } from './defaults.config';
 export const winstonOptions = (): WinstonModuleOptions => {
   const logsFilePath = path.join(path.resolve(), `./logs`);
   const dailyRotateTransport = new winstonDailyRotate({
-    filename: logsFilePath + '%DATE%.log',
+    filename: logsFilePath + '/%DATE%.log',
     datePattern: 'YYYY-MM-DD',
   });
 
